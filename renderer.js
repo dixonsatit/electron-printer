@@ -26,15 +26,10 @@ printers.map((item, index) => {
 
 
 const data = [
+
   {
     type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table
-    value: "||---",
-    style: `text-align:left;`,
-    css: { "font-size": "12px" },
-  },
-  {
-    type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table
-    value: "HEADER",
+    value: "โรงพยาบาลขอนแก่น",
     style: `text-align:center;`,
     css: { "font-weight": "700", "font-size": "18px" },
   },
@@ -47,9 +42,7 @@ const data = [
   },
   {
     type: "text", // 'text' | 'barCode' | 'qrCode' | 'image' | 'table'
-    value:
-      "Lorem ipsum<br><br> . , ; : ( ) - + = ! # % \" ' <br><br> ã Ã ç Ç $ & @ ê Ê í Í<br><br> 0 1 2 3 4 5 6 7 8 9 <br>a b c d e f g h i j k l m n o p q r s t u v w x y z<br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br><br><hr><br>elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \n ullamco \n laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum<br>",
-
+    value: "Apple ได้แก้ไขเครื่องหมายการค้าสำหรับ Final Cut Pro ซึ่งเป็นซอฟต์แวร์ตัดต่อวิดีโอระดับไฮเอนด์ ระดับมืออาชีพในลักษณะที่ชี้ให้เห็นว่าอาจมีการวางแผนที่จะเปลี่ยนรูปแบบการชำระเงินครั้งเดียวสำหรับซอฟต์แวร์ให้เป็นการสมัครสมาชิกตามรายงานของ Patently Apple เมื่อวันจันทร์ที่ผ่านมา Apple ได้เพิ่มรายชื่อ Nice Classification #42 ให้กับเครื่องหมายการค้า Final Cut Pro ในยุโรป การระบุคลาส 42 จะระบุไว้ว่ารวมถึงซอฟต์แวร์เป็นบริการ (SaaS) หรือแพลตฟอร์มเป็นบริการ (PaaS) สำหรับบริบท Microsoft Office 365 ซึ่งอิงตามการสมัครสมาชิกรายเดือนหรือรายปีจะมีรายการ Class 42 เดียวกันสำหรับชุดซอฟต์แวร์",
     css: {
       "font-size": "12px",
       "font-family": "sans-serif",
@@ -142,7 +135,7 @@ function print() {
   console.log(printerName, widthPage);
 
   const options = {
-    preview: false, // Preview in window or print
+    preview: true, // Preview in window or print
     width: widthPage, //  width of content body
     margin: "0 0 0 0", // margin of content body
     copies: 1, // Number of copies to print
@@ -162,7 +155,7 @@ function print() {
 
   if (printerName && widthPage) {
     PosPrinter.print(d, options)
-      .then(() => {})
+      .then(() => { })
       .catch((error) => {
         console.error(error);
       });

@@ -6,21 +6,18 @@
   "scripts": {
     "start": "electron ."
   },
-  
   "repository": "https://github.com/fssonca/electron-printer",
   "keywords": [
     "Electron",
     "quick",
     "start",
     "tutorial",
-	"printer",
+    "printer",
     "demo"
   ],
   "author": "Fernando Sousa",
-
   "devDependencies": {
     "electron": "^9.1.0"
-    
   },
   "dependencies": {
     "electron-pos-printer": "^1.2.0"
